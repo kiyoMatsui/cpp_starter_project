@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.5)
 
 # Set the project name to your project name, my project isn't very descriptive
 project(myproject CXX)
@@ -16,8 +16,8 @@ include(cmake/CompilerWarnings.cmake)
 set_project_warnings(project_warnings)
 
 # sanitizer options if supported by compiler
-include(cmake/Sanitizers.cmake)
-enable_sanitizers(project_options)
+#include(cmake/Sanitizers.cmake)
+#enable_sanitizers(project_options)
 
 # enable doxygen
 include(cmake/Doxygen.cmake)
