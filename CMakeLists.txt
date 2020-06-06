@@ -18,6 +18,9 @@ endif()
 # Link this 'library' to use the warnings specified in CompilerWarnings.cmake
 add_library(project_warnings INTERFACE)
 
+# enable cache system
+include(cmake/Cache.cmake)
+
 # standard compiler warnings
 include(cmake/CompilerWarnings.cmake)
 set_project_warnings(project_warnings)
@@ -35,6 +38,7 @@ include(cmake/StaticAnalyzers.cmake)
 
 option(BUILD_SHARED_LIBS "Enable compilation of shared libraries" OFF)
 option(ENABLE_TESTING "Enable Test Builds" ON)
+option(ENABLE_FUZZING "Enable Fuzzing Builds" OFF)
 
 # Very basic PCH example
 option(ENABLE_PCH "Enable Precompiled Headers" OFF)
